@@ -1,8 +1,8 @@
 #!/bin/bash
 
-sleep 300
+sleep 60
 
-LOCAL_IP=$(ip addr show | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}' | cut -d'/' -f1)
+LOCAL_IP=$(ip addr show | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}' | cut -d'/' -f1 | head -n 1 )
 
 MESSAGE="Local IP: $LOCAL_IP"
 
